@@ -1,7 +1,7 @@
 {
-  "workspace": "Espace d’affectation",
-  "heading": "Affectez les tâches aux bonnes personnes.",
-  "description": "Essayez avec trois tâches et trois techniciens. Voyez qui peut prendre chaque tâche sans donner deux tâches simultanées à la même personne.",
+  "workspace": "Espace de planification",
+  "heading": "Préparez le travail et vérifiez les plans.",
+  "description": "Choisissez un flux, vérifiez ses données et conservez le contexte du résultat.",
   "setup": "1. Préparer",
   "exampleHeading": "Exemple : une intervention le matin",
   "jsonSetupHeading": "Vos données JSON",

@@ -1,6 +1,6 @@
 # Orchestrata Workbench
 
-Plan job assignments from Excel or CSV, review results, and export the plan.
+Prepare planning inputs from spreadsheets or normalized record exports, review data, and keep plans in context.
 
 The workbench maps spreadsheet columns to jobs and people, highlights values that need attention, and submits a confirmed planning model to a compatible Orchestrata API. Results identify the assigned person and source rows. A failed rerun keeps the last successful plan and its CSV available.
 
@@ -42,6 +42,20 @@ Files are read in the current tab. Running sends a compiled constraint model to 
 
 The interface supports six languages and light and dark themes. Interface language does not translate service-provided recipe text or results.
 
+## Prepare maintenance package inputs
+
+Choose **Maintenance package inputs** to prepare data for the published [`maintenance-shift` 1.0.0 package](https://github.com/ilstarno/orchestrata-recipes/tree/10ac8261727e3b024e277fbc0a5240815d6e40d2/packages/maintenance-shift). Select the `cost` or `delay` entrypoint, then open an Excel workbook, three CSV tables, or a local normalized-record JSON export. JSON editing is not required. Direct named records and the `tables → table name → records` export envelope are accepted; no hosted connector is supplied.
+
+| Table | Fields |
+| --- | --- |
+| `work_orders` | `id` |
+| `technicians` | `id`, `capacity_slots`, `available` |
+| `eligibility` | `work_order_id`, `technician_id`, `cost_cents`, `delay_minutes` |
+
+Review mappings and source values, correct flagged fields, confirm, and export the prepared input. Stable identifiers are preserved, never generated from row positions. The runtime accepts 1–64 ASCII letters, digits, hyphens or underscores for IDs, boolean availability, and integer values from 0 to 1,000,000. Limits are 32 orders, 32 technicians and 128 total records. The package caps each technician at three orders and permits only explicit eligibility edges. Cost and delay both maximize coverage first; delay is a sum of estimates, not elapsed shift time.
+
+**Package execution is not connected to an authenticated service in this application.** This workflow prepares and exports input; it does not run a package or display a solved result. The existing skill-based assignment workflow still uses the typed solve API described above. Neither workflow connects to Salesforce or another external data source. Package metadata is pinned to the linked version; it is not a live service catalog.
+
 ## Check and build
 
 From `frontend/`:
@@ -52,13 +66,13 @@ npm run build
 npm audit --omit=dev
 ```
 
-Tests include TypeScript checks, locale validation, unit tests and DOM integration tests. The build checks locales and application types, then writes production assets to `frontend/dist/`. The optional live-API test is skipped unless a local service is supplied:
+Tests include TypeScript checks, locale validation, unit tests and DOM integration tests. The build checks locales and application types, then writes production assets to `frontend/dist/`. The optional live-API tests are skipped unless a local service is supplied:
 
 ```sh
 ORCHESTRATA_TEST_API=http://127.0.0.1:3000 npm test
 ```
 
-That test accepts a loopback URL and exercises synthetic Excel and CSV uploads against the service. DOM tests do not verify rendered mobile layouts or end-to-end sign-in.
+Those tests accept a loopback URL and exercise synthetic Excel/CSV uploads and normalized skill-assignment input against the solve service. Maintenance package preparation tests compare all three source channels with the same published synthetic records; they do not validate package execution or authorization. DOM tests do not verify rendered mobile layouts or end-to-end sign-in.
 
 To serve the production build, configure a same-origin `/api` proxy to the compatible backend and SPA route fallback to `index.html`. Static assets alone cannot calculate a plan. Development servers are intended for local development.
 

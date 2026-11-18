@@ -1,7 +1,7 @@
 {
-  "workspace": "Arbeitsbereich für Zuordnungen",
-  "heading": "Aufgaben passenden Personen zuordnen.",
-  "description": "Probieren Sie drei Aufgaben mit drei Technikern aus. Sehen Sie, wer welche Aufgabe übernehmen kann, ohne jemanden doppelt einzuplanen.",
+  "workspace": "Planungsbereich",
+  "heading": "Arbeit vorbereiten und Pläne prüfen.",
+  "description": "Arbeitsablauf wählen, Eingaben prüfen und den Ergebniskontext behalten.",
   "setup": "1. Einrichten",
   "exampleHeading": "Beispiel: Morgendlicher Serviceeinsatz",
   "jsonSetupHeading": "Ihre JSON-Eingabe",

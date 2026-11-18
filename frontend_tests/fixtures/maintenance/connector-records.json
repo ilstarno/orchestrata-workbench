@@ -1,0 +1,202 @@
+{
+  "tables": {
+    "work_orders": {
+      "records": [
+        {
+          "id": "pump-a"
+        },
+        {
+          "id": "pump-b"
+        },
+        {
+          "id": "cooling-loop"
+        },
+        {
+          "id": "compressor"
+        },
+        {
+          "id": "valve-bank"
+        },
+        {
+          "id": "fire-panel"
+        },
+        {
+          "id": "alarm-loop"
+        },
+        {
+          "id": "meter-a"
+        },
+        {
+          "id": "meter-b"
+        },
+        {
+          "id": "hv-isolator"
+        },
+        {
+          "id": "lift-controller"
+        },
+        {
+          "id": "inspection"
+        }
+      ]
+    },
+    "technicians": {
+      "records": [
+        {
+          "id": "mechanical-east",
+          "capacity_slots": 3,
+          "available": true
+        },
+        {
+          "id": "mechanical-west",
+          "capacity_slots": 2,
+          "available": true
+        },
+        {
+          "id": "safety",
+          "capacity_slots": 2,
+          "available": true
+        },
+        {
+          "id": "instrumentation",
+          "capacity_slots": 2,
+          "available": true
+        },
+        {
+          "id": "general",
+          "capacity_slots": 1,
+          "available": true
+        },
+        {
+          "id": "hv-standby",
+          "capacity_slots": 1,
+          "available": false
+        }
+      ]
+    },
+    "eligibility": {
+      "records": [
+        {
+          "work_order_id": "pump-a",
+          "technician_id": "mechanical-east",
+          "cost_cents": 1800,
+          "delay_minutes": 35
+        },
+        {
+          "work_order_id": "pump-a",
+          "technician_id": "mechanical-west",
+          "cost_cents": 2800,
+          "delay_minutes": 11
+        },
+        {
+          "work_order_id": "pump-b",
+          "technician_id": "mechanical-east",
+          "cost_cents": 1200,
+          "delay_minutes": 40
+        },
+        {
+          "work_order_id": "pump-b",
+          "technician_id": "mechanical-west",
+          "cost_cents": 2200,
+          "delay_minutes": 16
+        },
+        {
+          "work_order_id": "cooling-loop",
+          "technician_id": "mechanical-east",
+          "cost_cents": 1600,
+          "delay_minutes": 30
+        },
+        {
+          "work_order_id": "cooling-loop",
+          "technician_id": "mechanical-west",
+          "cost_cents": 3200,
+          "delay_minutes": 5
+        },
+        {
+          "work_order_id": "compressor",
+          "technician_id": "mechanical-east",
+          "cost_cents": 1400,
+          "delay_minutes": 45
+        },
+        {
+          "work_order_id": "compressor",
+          "technician_id": "mechanical-west",
+          "cost_cents": 2600,
+          "delay_minutes": 12
+        },
+        {
+          "work_order_id": "valve-bank",
+          "technician_id": "mechanical-east",
+          "cost_cents": 1900,
+          "delay_minutes": 25
+        },
+        {
+          "work_order_id": "valve-bank",
+          "technician_id": "general",
+          "cost_cents": 1000,
+          "delay_minutes": 60
+        },
+        {
+          "work_order_id": "fire-panel",
+          "technician_id": "safety",
+          "cost_cents": 1100,
+          "delay_minutes": 50
+        },
+        {
+          "work_order_id": "alarm-loop",
+          "technician_id": "safety",
+          "cost_cents": 1500,
+          "delay_minutes": 20
+        },
+        {
+          "work_order_id": "meter-a",
+          "technician_id": "instrumentation",
+          "cost_cents": 800,
+          "delay_minutes": 30
+        },
+        {
+          "work_order_id": "meter-a",
+          "technician_id": "general",
+          "cost_cents": 550,
+          "delay_minutes": 50
+        },
+        {
+          "work_order_id": "meter-b",
+          "technician_id": "instrumentation",
+          "cost_cents": 900,
+          "delay_minutes": 20
+        },
+        {
+          "work_order_id": "meter-b",
+          "technician_id": "general",
+          "cost_cents": 650,
+          "delay_minutes": 40
+        },
+        {
+          "work_order_id": "hv-isolator",
+          "technician_id": "hv-standby",
+          "cost_cents": 1000,
+          "delay_minutes": 15
+        },
+        {
+          "work_order_id": "inspection",
+          "technician_id": "safety",
+          "cost_cents": 900,
+          "delay_minutes": 35
+        },
+        {
+          "work_order_id": "inspection",
+          "technician_id": "instrumentation",
+          "cost_cents": 700,
+          "delay_minutes": 45
+        },
+        {
+          "work_order_id": "inspection",
+          "technician_id": "general",
+          "cost_cents": 400,
+          "delay_minutes": 55
+        }
+      ]
+    }
+  }
+}

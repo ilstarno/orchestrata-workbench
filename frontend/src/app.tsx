@@ -1,8 +1,7 @@
-import { type ReactNode, useRef, useState } from 'react'
+import { lazy, Suspense, type ReactNode, useRef, useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { Button, Label, TextArea, TextField } from 'react-aria-components'
 import { ArrowRight, Braces } from 'lucide-react'
-import { SpreadsheetPlan } from './features/assignment/spreadsheet/spreadsheet-plan'
 import { ExampleOverview } from './features/assignment/example-overview'
 import { PlanResult } from './features/assignment/plan-result'
 import { solveProblem, type SolveResult } from './shared/api/solve'
@@ -18,6 +17,9 @@ import { useTheme } from './shared/theme/use-theme'
 import './styles.css'
 import './features/assignment/assignment.css'
 
+const SpreadsheetPlan = lazy(() => import('./features/assignment/spreadsheet/spreadsheet-plan').then(module => ({ default: module.SpreadsheetPlan })))
+const MaintenanceWorkbench = lazy(() => import('./features/maintenance/maintenance-workbench').then(module => ({ default: module.MaintenanceWorkbench })))
+
 interface RunInput {
   definition: string
   useExampleLabels: boolean
@@ -26,6 +28,8 @@ interface RunInput {
 export function App({ recipeNavigation }: { recipeNavigation?: ReactNode }) {
   const { theme } = useTheme()
   const { t } = useLocale()
+  const [workflow, setWorkflow] = useState('assignment')
+  const [maintenanceVisited, setMaintenanceVisited] = useState(false)
   const activeRun = useRef(false)
   const [eligibility, setEligibility] = useState(exampleEligibility)
   const [customDefinition, setCustomDefinition] = useState<string | null>(null)
@@ -59,7 +63,14 @@ export function App({ recipeNavigation }: { recipeNavigation?: ReactNode }) {
           </div>
         </div>
 
-        <SpreadsheetPlan />
+        <label className="workflow-select">{t('maintenance', 'workflow')}
+          <select value={workflow} onChange={event => { setWorkflow(event.target.value); if (event.target.value === 'maintenance') setMaintenanceVisited(true) }}>
+            <option value="assignment">{t('maintenance', 'assignment')}</option><option value="maintenance">{t('maintenance', 'maintenance')}</option>
+          </select>
+        </label>
+        {maintenanceVisited && <div hidden={workflow !== 'maintenance'}><Suspense fallback={<p role="status">{t('spreadsheet', 'checking')}</p>}><MaintenanceWorkbench /></Suspense></div>}
+        <div hidden={workflow !== 'assignment'}>
+        <Suspense fallback={<p role="status">{t('spreadsheet', 'checking')}</p>}><SpreadsheetPlan /></Suspense>
         <details className="sample-workflow"><summary>{t('spreadsheet', 'sample')}</summary>
         <div className="workspace-grid">
           <section className="panel" aria-labelledby="setup-heading">
@@ -126,6 +137,7 @@ export function App({ recipeNavigation }: { recipeNavigation?: ReactNode }) {
           />
         </div>
         </details>
+        </div>
         <footer className="page-footer">
           {t('app', 'footerBrand')}
           <span>{t('app', 'footerWarning')}</span>

@@ -19,14 +19,14 @@ const harness = vi.hoisted(() => ({
 }))
 
 // Run the actual App callbacks and render the actual review panel without
-// adding a DOM dependency. The first three hooks are App's local state.
+// adding a DOM dependency. The first five hooks are App's local state.
 vi.mock('react', async importOriginal => {
   const real = await importOriginal<typeof import('react')>()
   return {
     ...real,
     useState(initial: unknown) {
       const slot = harness.slot++
-      if (slot >= 3) return real.useState(initial)
+      if (slot >= 5) return real.useState(initial)
       if (!harness.initialized.has(slot)) {
         harness.state[slot] = typeof initial === 'function' ? initial() : initial
         harness.initialized.add(slot)

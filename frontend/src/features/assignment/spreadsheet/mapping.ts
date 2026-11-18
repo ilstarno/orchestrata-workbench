@@ -1,4 +1,4 @@
-import type { PlanningInput } from './planning-input'
+import type { PlanningInput } from '../planning-input'
 import type { SheetSelection } from './sheet-selection'
 import { headers, sourceRows, type Workbook } from './workbook'
 export type Group = 'jobs' | 'people'

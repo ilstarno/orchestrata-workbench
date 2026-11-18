@@ -1,0 +1,5 @@
+Synthetic maintenance records and CSV fixtures from orchestrata-engine,
+commit ecde611cea4ba9995dc6108855ae0505ab3bc05d,
+examples/maintenance-package. Apache-2.0.
+https://github.com/ilstarno/orchestrata-engine/tree/ecde611cea4ba9995dc6108855ae0505ab3bc05d/examples/maintenance-package
+maintenance.xlsx contains those same synthetic records in workbook form.

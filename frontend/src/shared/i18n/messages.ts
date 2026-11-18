@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import type maintenance from '../../locales/en-US/maintenance.json'
 import type spreadsheet from '../../locales/en-US/spreadsheet.json'
 import type app from '../../locales/en-US/app.json'
 import type appShell from '../../locales/en-US/app-shell.json'
@@ -10,6 +11,7 @@ import type recipeGrid from '../../locales/en-US/recipe-grid.json'
 import { defaultLocale, type Locale } from './supported-locales'
 
 interface Components {
+  maintenance: typeof maintenance
   spreadsheet: typeof spreadsheet
   app: typeof app
   'app-shell': typeof appShell

@@ -11,7 +11,7 @@ describe('assignment workspace', () => {
       <QueryClientProvider client={new QueryClient()}><App /></QueryClientProvider>,
     )
 
-    expect(page).toContain('Assign jobs to the right people.')
+    expect(page).toContain('Prepare work and review plans.')
     expect(page).toContain('Each person can do one job.')
     expect(page).toContain('Lift repair')
     expect(page).toContain('Run example')

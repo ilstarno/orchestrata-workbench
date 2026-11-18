@@ -1,7 +1,7 @@
 {
-  "workspace": "Werkruimte voor toewijzingen",
-  "heading": "Wijs taken toe aan de juiste mensen.",
-  "description": "Probeer drie taken met drie monteurs. Bekijk wie elke taak kan uitvoeren zonder iemand dubbel in te plannen.",
+  "workspace": "Planningswerkruimte",
+  "heading": "Bereid werk voor en controleer plannen.",
+  "description": "Kies een werkproces, controleer de invoer en behoud de context van het resultaat.",
   "setup": "1. Instellen",
   "exampleHeading": "Voorbeeld: een serviceoproep in de ochtend",
   "jsonSetupHeading": "Uw JSON-invoer",

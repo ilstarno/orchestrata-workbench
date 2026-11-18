@@ -1,7 +1,7 @@
 {
-  "workspace": "Area di lavoro per le assegnazioni",
-  "heading": "Assegna le attività alle persone adatte.",
-  "description": "Prova con tre attività e tre tecnici. Verifica chi può svolgere ogni attività senza sovrapporre gli incarichi.",
+  "workspace": "Area di pianificazione",
+  "heading": "Prepara il lavoro e rivedi i piani.",
+  "description": "Scegli un flusso, verifica i dati e mantieni il contesto del risultato.",
   "setup": "1. Imposta",
   "exampleHeading": "Esempio: una chiamata di assistenza al mattino",
   "jsonSetupHeading": "I tuoi dati JSON",

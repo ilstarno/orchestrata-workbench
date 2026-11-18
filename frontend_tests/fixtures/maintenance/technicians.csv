@@ -1,0 +1,7 @@
+id,capacity_slots,available
+mechanical-east,3,true
+mechanical-west,2,true
+safety,2,true
+instrumentation,2,true
+general,1,true
+hv-standby,1,false

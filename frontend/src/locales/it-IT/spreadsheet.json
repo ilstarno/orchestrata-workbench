@@ -52,5 +52,10 @@
   "issue_limit": "Non superare 200 interventi e persone in totale.",
   "issue_empty": "Inserisci almeno un intervento.",
   "issue_unmapped": "Questa riga contiene valori solo in colonne non associate. Correggi l’associazione o il file; la riga non è stata scartata.",
-  "personRow": "Riga originale della persona"
+  "personRow": "Riga originale della persona",
+  "planSource": "Dati usati per questo piano",
+  "jobsSheet": "Foglio interventi: {sheet}",
+  "peopleSheet": "Foglio persone: {sheet}",
+  "planCounts": "{assigned} assegnati · {unassigned} non assegnati",
+  "reviewResult": "Rivedi il risultato"
 }

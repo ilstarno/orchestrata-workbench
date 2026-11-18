@@ -52,5 +52,10 @@
   "issue_limit": "Use no more than 200 jobs and people combined.",
   "issue_empty": "Include at least one job.",
   "issue_unmapped": "This source row has values only in unmapped columns. Correct the mapping or source file; it has not been dropped.",
-  "personRow": "Person source row"
+  "personRow": "Person source row",
+  "planSource": "Input used for this plan",
+  "jobsSheet": "Jobs sheet: {sheet}",
+  "peopleSheet": "People sheet: {sheet}",
+  "planCounts": "{assigned} assigned · {unassigned} unassigned",
+  "reviewResult": "Review result"
 }

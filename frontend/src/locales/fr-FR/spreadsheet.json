@@ -52,5 +52,10 @@
   "issue_limit": "Limitez le total à 200 interventions et personnes.",
   "issue_empty": "Ajoutez au moins une intervention.",
   "issue_unmapped": "Cette ligne ne contient des valeurs que dans des colonnes non associées. Corrigez les associations ou le fichier ; la ligne n’a pas été supprimée.",
-  "personRow": "Ligne source de la personne"
+  "personRow": "Ligne source de la personne",
+  "planSource": "Données utilisées pour ce plan",
+  "jobsSheet": "Feuille des interventions : {sheet}",
+  "peopleSheet": "Feuille des personnes : {sheet}",
+  "planCounts": "{assigned} affectées · {unassigned} non affectées",
+  "reviewResult": "Consulter le résultat"
 }

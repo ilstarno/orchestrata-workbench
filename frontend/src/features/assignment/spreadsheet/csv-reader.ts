@@ -37,15 +37,18 @@ function parse(text: string, separator: string): string[][] {
 export function readCsv(text: string): string[][] {
   if (text.includes('\0')) throw new ImportError('invalid-file')
   const failures: unknown[] = []
+  const parsed: string[][][] = []
   const candidates = [',', ';'].flatMap(separator => {
     try {
       const rows = parse(text, separator)
+      parsed.push(rows)
       const nonblank = rows.filter(row => row.some(cell => cell.trim()))
       const consistent = nonblank.slice(0, 4).some((row, i) => row.length >= 2 && (nonblank.length - i >= 2 || nonblank.length === 1 && i === 0) && nonblank.slice(i).every(next => next.length === row.length))
       return consistent ? [rows] : []
     } catch (error) { failures.push(error); return [] }
   })
   if (failures.some(error => error instanceof ImportError && error.code === 'sheet-limit')) throw new ImportError('sheet-limit')
+  if (!candidates.length && parsed.length === 2 && JSON.stringify(parsed[0]) === JSON.stringify(parsed[1]) && parsed[0].some(row => row[0]?.trim()) && parsed[0].every(row => row.length === 1)) return parsed[0]
   if (candidates.length !== 1) throw new ImportError('delimiter')
   return candidates[0]
 }

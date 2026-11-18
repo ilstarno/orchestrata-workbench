@@ -1,7 +1,7 @@
 {
-  "workspace": "Assignment workspace",
-  "heading": "Assign jobs to the right people.",
-  "description": "Try three jobs and three technicians. See who can take each job without double-booking anyone.",
+  "workspace": "Planning workspace",
+  "heading": "Prepare work and review plans.",
+  "description": "Choose a workflow, review its input and keep the result in context.",
   "setup": "1. Set up",
   "exampleHeading": "Example: A morning service callout",
   "jsonSetupHeading": "Your JSON setup",

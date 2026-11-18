@@ -146,3 +146,21 @@ it('returns through the real shell without discarding edited inputs, result, loc
   expect(host.querySelector('.shell')!.getAttribute('data-theme')).toBe(theme)
   expect(host.querySelector<HTMLDetailsElement>('.eligibility-editor')?.open).toBe(true)
 })
+
+it('preserves package entrypoint and source selection when switching workflows', async () => {
+  await act(async () => root.render(<QueryClientProvider client={new QueryClient()}><App /></QueryClientProvider>))
+  const workflow = host.querySelector<HTMLSelectElement>('.workflow-select select')!
+  async function choose(select: HTMLSelectElement, value: string) {
+    await act(async () => { select.value = value; select.dispatchEvent(new Event('change', { bubbles: true })); await new Promise(resolve => setTimeout(resolve, 20)) })
+  }
+  await choose(workflow, 'maintenance')
+  await vi.waitFor(async () => { await act(async () => {}); expect(host.querySelector('.maintenance-workbench')).not.toBeNull() })
+  const selects = host.querySelectorAll<HTMLSelectElement>('.maintenance-workbench select')
+  await choose(selects[0], 'delay'); await choose(selects[1], 'records')
+  await choose(workflow, 'assignment')
+  expect(host.querySelector('.maintenance-workbench')!.closest('[hidden]')).not.toBeNull()
+  await choose(workflow, 'maintenance')
+  expect(host.querySelector('.maintenance-workbench')!.closest('[hidden]')).toBeNull()
+  expect(selects[0].value).toBe('delay'); expect(selects[1].value).toBe('records')
+  expect(host.querySelector<HTMLButtonElement>('[aria-describedby=maintenance-run-status]')!.disabled).toBe(true)
+})

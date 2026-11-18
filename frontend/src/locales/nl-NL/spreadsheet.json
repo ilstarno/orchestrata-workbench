@@ -52,5 +52,10 @@
   "issue_limit": "Gebruik maximaal 200 opdrachten en personen samen.",
   "issue_empty": "Voeg minstens één opdracht toe.",
   "issue_unmapped": "Deze bronrij heeft alleen waarden in niet-gekoppelde kolommen. Corrigeer de koppeling of het bestand; de rij is niet verwijderd.",
-  "personRow": "Bronrij van persoon"
+  "personRow": "Bronrij van persoon",
+  "planSource": "Invoer gebruikt voor dit plan",
+  "jobsSheet": "Takenblad: {sheet}",
+  "peopleSheet": "Personenblad: {sheet}",
+  "planCounts": "{assigned} toegewezen · {unassigned} niet toegewezen",
+  "reviewResult": "Resultaat bekijken"
 }

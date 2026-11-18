@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { compileAssignment } from '../../frontend/src/features/assignment/spreadsheet/compile-assignment'
+import { compileAssignment } from '../../frontend/src/features/assignment/assignment-planner'
 import { checkMapping, suggestMapping } from '../../frontend/src/features/assignment/spreadsheet/mapping'
 import { makeSheet, sourceRows } from '../../frontend/src/features/assignment/spreadsheet/workbook'
 import { readCsv } from '../../frontend/src/features/assignment/spreadsheet/csv-reader'
-import type { PlanningInput } from '../../frontend/src/features/assignment/spreadsheet/planning-input'
+import type { PlanningInput } from '../../frontend/src/features/assignment/planning-input'
 
 const book = (available: string) => ({ sheets: [makeSheet('Jobs', [['Name', 'Required skill'], ['Équipement', 'Réparation']]), makeSheet('People', [['Name', 'Skills', 'Available', 'Job limit'], ['Mika', 'Réparation', available, '1']])] })
 describe('spreadsheet mapping and source identity', () => {

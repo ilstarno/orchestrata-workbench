@@ -52,5 +52,10 @@
   "issue_limit": "Użyj maksymalnie 200 zadań i osób łącznie.",
   "issue_empty": "Dodaj co najmniej jedno zadanie.",
   "issue_unmapped": "Ten wiersz zawiera wartości tylko w niedopasowanych kolumnach. Popraw mapowanie lub plik; wiersz nie został usunięty.",
-  "personRow": "Wiersz źródłowy osoby"
+  "personRow": "Wiersz źródłowy osoby",
+  "planSource": "Dane użyte do tego planu",
+  "jobsSheet": "Arkusz zadań: {sheet}",
+  "peopleSheet": "Arkusz osób: {sheet}",
+  "planCounts": "{assigned} przypisanych · {unassigned} nieprzypisanych",
+  "reviewResult": "Przejrzyj wynik"
 }

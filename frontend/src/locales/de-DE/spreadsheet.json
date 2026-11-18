@@ -52,5 +52,10 @@
   "issue_limit": "Höchstens 200 Aufträge und Personen insgesamt.",
   "issue_empty": "Fügen Sie mindestens einen Auftrag hinzu.",
   "issue_unmapped": "Diese Quellzeile enthält nur Werte in nicht zugeordneten Spalten. Korrigieren Sie die Zuordnung oder Quelldatei; die Zeile wurde nicht entfernt.",
-  "personRow": "Quellzeile der Person"
+  "personRow": "Quellzeile der Person",
+  "planSource": "Verwendete Eingabe für diesen Plan",
+  "jobsSheet": "Aufgabenblatt: {sheet}",
+  "peopleSheet": "Personenblatt: {sheet}",
+  "planCounts": "{assigned} zugewiesen · {unassigned} nicht zugewiesen",
+  "reviewResult": "Ergebnis prüfen"
 }

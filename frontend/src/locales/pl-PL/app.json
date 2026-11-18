@@ -1,7 +1,7 @@
 {
-  "workspace": "Obszar przydzielania zadań",
-  "heading": "Przydziel zadania odpowiednim osobom.",
-  "description": "Wypróbuj trzy zadania i trzech techników. Sprawdź, kto może wykonać każde zadanie bez nakładających się przydziałów.",
+  "workspace": "Obszar planowania",
+  "heading": "Przygotuj pracę i sprawdź plany.",
+  "description": "Wybierz przebieg pracy, sprawdź dane i zachowaj kontekst wyniku.",
   "setup": "1. Przygotuj",
   "exampleHeading": "Przykład: poranne wezwanie serwisowe",
   "jsonSetupHeading": "Twoje dane JSON",

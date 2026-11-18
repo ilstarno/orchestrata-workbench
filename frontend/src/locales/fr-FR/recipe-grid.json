@@ -1,0 +1,13 @@
+{
+  "title": "Modèles de planification",
+  "description": "Consultez les exemples de planification disponibles sur ce serveur.",
+  "gridLabel": "Modèles trouvés",
+  "searchLabel": "Rechercher des modèles",
+  "backToRecipes": "Retour aux exemples",
+  "exampleHeading": "Données d’exemple",
+  "loadingExample": "Chargement de l’exemple…",
+  "previewError": "Impossible de charger cet exemple.",
+  "exampleSafety": "Cet exemple utilise des données fictives. Son exécution ne modifie aucun système externe.",
+  "inputFields": "Champs de saisie",
+  "exampleJson": "Voir le JSON de l’exemple"
+}

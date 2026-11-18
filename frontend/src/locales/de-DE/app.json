@@ -1,0 +1,18 @@
+{
+  "workspace": "Arbeitsbereich für Zuordnungen",
+  "heading": "Aufgaben passenden Personen zuordnen.",
+  "description": "Probieren Sie drei Aufgaben mit drei Technikern aus. Sehen Sie, wer welche Aufgabe übernehmen kann, ohne jemanden doppelt einzuplanen.",
+  "setup": "1. Einrichten",
+  "exampleHeading": "Beispiel: Morgendlicher Serviceeinsatz",
+  "jsonSetupHeading": "Ihre JSON-Eingabe",
+  "jsonSetupNote": "Dieser Lauf verwendet Ihre JSON-Eingabe statt des Beispiels.",
+  "editJson": "Aufgabe als JSON bearbeiten",
+  "problemJson": "Aufgabe als JSON",
+  "noSetup": "Keine Einrichtung nötig",
+  "reset": "Beispiel wiederherstellen",
+  "checking": "Zuordnungen werden geprüft",
+  "runExample": "Beispiel ausführen",
+  "runEdited": "Mit Änderungen ausführen",
+  "footerBrand": "Orchestrata / Entwicklungsvorschau",
+  "footerWarning": "Prüfen Sie das Ergebnis, bevor Sie damit echte Arbeit einplanen."
+}

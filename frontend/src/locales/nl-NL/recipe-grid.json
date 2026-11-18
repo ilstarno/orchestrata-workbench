@@ -1,0 +1,13 @@
+{
+  "title": "Planningssjablonen",
+  "description": "Bekijk de planningsvoorbeelden op deze server.",
+  "gridLabel": "Gevonden sjablonen",
+  "searchLabel": "Zoek sjablonen",
+  "backToRecipes": "Terug naar de voorbeelden",
+  "exampleHeading": "Voorbeeldgegevens",
+  "loadingExample": "Voorbeeld laden…",
+  "previewError": "Dit voorbeeld kon niet worden geladen.",
+  "exampleSafety": "Dit voorbeeld gebruikt fictieve gegevens. Uitvoeren verandert niets in externe systemen.",
+  "inputFields": "Invoervelden",
+  "exampleJson": "Bekijk de JSON van het voorbeeld"
+}

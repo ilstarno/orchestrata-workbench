@@ -1,0 +1,16 @@
+{
+  "loading": "Loading results…",
+  "updating": "Updating results…",
+  "updatingPrevious": "Updating results. Showing the previous page.",
+  "page": "Page {page} of {lastPage}.",
+  "resultCountOne": "{count} result.",
+  "resultCountFew": "{count} results.",
+  "resultCountMany": "{count} results.",
+  "resultCountOther": "{count} results.",
+  "loadError": "Could not load results.",
+  "retry": "Try again",
+  "pagination": "Result pages",
+  "previous": "Previous",
+  "next": "Next",
+  "noResults": "No results on this page."
+}

@@ -1,0 +1,16 @@
+{
+  "loading": "Caricamento dei risultati…",
+  "updating": "Aggiornamento dei risultati…",
+  "updatingPrevious": "Aggiornamento in corso. La pagina precedente resta visibile.",
+  "page": "Pagina {page} di {lastPage}.",
+  "resultCountOne": "{count} risultato.",
+  "resultCountFew": "{count} risultati.",
+  "resultCountMany": "{count} risultati.",
+  "resultCountOther": "{count} risultati.",
+  "loadError": "Impossibile caricare i risultati.",
+  "retry": "Riprova",
+  "pagination": "Pagine dei risultati",
+  "previous": "Precedente",
+  "next": "Successiva",
+  "noResults": "Nessun risultato in questa pagina."
+}

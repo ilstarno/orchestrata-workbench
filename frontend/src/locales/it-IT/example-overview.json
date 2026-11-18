@@ -1,0 +1,18 @@
+{
+  "scenario": "Tre interventi iniziano allo stesso tempo. Ogni persona può svolgere un solo intervento.",
+  "nobody": "Nessuna persona selezionata",
+  "preferenceLabel": "Preferenza:",
+  "preference": "Assegna ad Alex la riparazione dell’ascensore se è ancora possibile coprire tutti e tre gli interventi.",
+  "editEligibility": "Modifica chi può svolgere ogni intervento",
+  "eligibilityHelp": "Seleziona i tecnici qualificati e disponibili per ciascun intervento.",
+  "jobToEdit": "Intervento da modificare",
+  "jobs": "Interventi",
+  "job": "Intervento",
+  "eligiblePeople": "Persone idonee",
+  "actions": "Azioni",
+  "edit": "Modifica",
+  "editJob": "Modifica {job}",
+  "attentionOnly": "Da verificare ({count})",
+  "noAttention": "Nessun intervento da verificare.",
+  "selectPerson": "Seleziona almeno una persona qualificata e disponibile per questo intervento."
+}

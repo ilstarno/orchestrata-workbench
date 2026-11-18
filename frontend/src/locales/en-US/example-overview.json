@@ -1,0 +1,18 @@
+{
+  "scenario": "Three jobs start at the same time. Each person can do one job.",
+  "nobody": "Nobody selected",
+  "preferenceLabel": "Preference:",
+  "preference": "Give the lift repair to Alex if all three jobs can still be covered.",
+  "editEligibility": "Change who can take each job",
+  "eligibilityHelp": "Select the technicians who are qualified and available for each job.",
+  "jobToEdit": "Job to edit",
+  "jobs": "Jobs",
+  "job": "Job",
+  "eligiblePeople": "Eligible people",
+  "actions": "Actions",
+  "edit": "Edit",
+  "editJob": "Edit {job}",
+  "attentionOnly": "Needs attention ({count})",
+  "noAttention": "No jobs need attention.",
+  "selectPerson": "Select at least one qualified, available person for this job."
+}

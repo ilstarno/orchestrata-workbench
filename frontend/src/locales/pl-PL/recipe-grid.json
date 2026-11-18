@@ -1,0 +1,13 @@
+{
+  "title": "Szablony planowania",
+  "description": "Przejrzyj przykłady planowania dostępne na tym serwerze.",
+  "gridLabel": "Znalezione szablony",
+  "searchLabel": "Szukaj szablonów",
+  "backToRecipes": "Wróć do przykładów",
+  "exampleHeading": "Dane przykładowe",
+  "loadingExample": "Wczytywanie przykładu…",
+  "previewError": "Nie udało się wczytać tego przykładu.",
+  "exampleSafety": "Ten przykład korzysta z fikcyjnych danych. Uruchomienie nie zmienia danych w żadnym zewnętrznym systemie.",
+  "inputFields": "Pola wejściowe",
+  "exampleJson": "Pokaż przykładowy JSON"
+}

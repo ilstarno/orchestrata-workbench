@@ -1,0 +1,18 @@
+{
+  "workspace": "Area di lavoro per le assegnazioni",
+  "heading": "Assegna le attività alle persone adatte.",
+  "description": "Prova con tre attività e tre tecnici. Verifica chi può svolgere ogni attività senza sovrapporre gli incarichi.",
+  "setup": "1. Imposta",
+  "exampleHeading": "Esempio: una chiamata di assistenza al mattino",
+  "jsonSetupHeading": "I tuoi dati JSON",
+  "jsonSetupNote": "Questo calcolo usa i tuoi dati JSON al posto dell’esempio.",
+  "editJson": "Modifica il problema in JSON",
+  "problemJson": "Problema in JSON",
+  "noSetup": "Nessuna configurazione necessaria",
+  "reset": "Ripristina l’esempio",
+  "checking": "Verifica delle assegnazioni",
+  "runExample": "Esegui l’esempio",
+  "runEdited": "Esegui con le modifiche",
+  "footerBrand": "Orchestrata / Anteprima di sviluppo",
+  "footerWarning": "Controlla il risultato prima di usarlo per pianificare attività reali."
+}

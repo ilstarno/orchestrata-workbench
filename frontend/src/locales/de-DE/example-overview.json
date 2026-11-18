@@ -1,0 +1,18 @@
+{
+  "scenario": "Drei Aufträge beginnen gleichzeitig. Jede Person kann einen Auftrag übernehmen.",
+  "nobody": "Niemand ausgewählt",
+  "preferenceLabel": "Präferenz:",
+  "preference": "Alex soll die Aufzugsreparatur übernehmen, wenn sich weiterhin alle drei Aufträge besetzen lassen.",
+  "editEligibility": "Zuständigkeit für die einzelnen Aufträge ändern",
+  "eligibilityHelp": "Wählen Sie für jeden Auftrag die qualifizierten und verfügbaren Fachkräfte aus.",
+  "jobToEdit": "Auftrag zum Bearbeiten",
+  "jobs": "Aufträge",
+  "job": "Auftrag",
+  "eligiblePeople": "Geeignete Personen",
+  "actions": "Aktionen",
+  "edit": "Bearbeiten",
+  "editJob": "{job} bearbeiten",
+  "attentionOnly": "Handlungsbedarf ({count})",
+  "noAttention": "Kein Auftrag benötigt Aufmerksamkeit.",
+  "selectPerson": "Wählen Sie mindestens eine qualifizierte, verfügbare Person für diesen Auftrag."
+}

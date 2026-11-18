@@ -1,0 +1,16 @@
+{
+  "loading": "Resultaten laden…",
+  "updating": "Resultaten bijwerken…",
+  "updatingPrevious": "Resultaten worden bijgewerkt. U ziet de vorige pagina.",
+  "page": "Pagina {page} van {lastPage}.",
+  "resultCountOne": "{count} resultaat.",
+  "resultCountFew": "{count} resultaten.",
+  "resultCountMany": "{count} resultaten.",
+  "resultCountOther": "{count} resultaten.",
+  "loadError": "De resultaten konden niet worden geladen.",
+  "retry": "Opnieuw proberen",
+  "pagination": "Resultaatpagina’s",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "noResults": "Geen resultaten op deze pagina."
+}

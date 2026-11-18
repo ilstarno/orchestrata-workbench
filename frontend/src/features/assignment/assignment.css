@@ -1,0 +1,236 @@
+.example-overview,
+.custom-setup,
+.setup-advanced {
+  margin: 18px 24px;
+}
+
+.example-overview p,
+.custom-setup,
+.plan p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.example-overview p:first-child,
+.plan p:first-child {
+  margin-top: 0;
+}
+
+.assignment-list {
+  margin: 14px 0;
+}
+
+.assignment-list > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 12px;
+  padding: 13px 0;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.assignment-list dd {
+  color: var(--muted);
+  margin: 0;
+}
+
+.rule-note {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.advanced-panel summary,
+.text-button {
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.advanced-panel summary svg {
+  display: inline-block;
+  margin: 0 4px;
+  vertical-align: text-bottom;
+}
+
+.advanced-panel summary:focus-visible,
+.text-button:focus-visible,
+.result-json:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.setup-advanced .editor-field {
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.text-button {
+  background: transparent;
+  border: 0;
+  margin-top: 8px;
+  padding: 8px 0;
+}
+
+.text-button:disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+.setup-footer {
+  margin-top: auto;
+}
+
+.plan {
+  width: 100%;
+  align-self: flex-start;
+  min-width: 0;
+}
+
+.plan h3 {
+  margin-top: 4px;
+}
+
+.plan-success {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.plan-success svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.plan-error h3 {
+  color: #f58b8b;
+}
+
+.shell[data-theme=light] .plan-error h3 {
+  color: #9b1f30;
+}
+
+@media (max-width: 380px) {
+  .setup-footer { align-items: flex-start; flex-direction: column; }
+}
+
+.eligibility-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 8px 0 0;
+  border: 0;
+}
+
+.eligibility-group legend {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.eligibility-option {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.eligibility-option[data-focus-visible] {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.eligibility-check {
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+}
+
+.eligibility-check svg {
+  visibility: hidden;
+}
+
+.eligibility-option[data-selected] .eligibility-check {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.eligibility-option[data-selected] svg {
+  visibility: visible;
+}
+
+.reset-button {
+  margin-top: 0;
+}
+
+.eligibility-selector {
+  display: grid;
+  gap: 4px;
+  max-width: 24rem;
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+.eligibility-selector select {
+  min-height: 44px;
+  min-width: 0;
+  width: 100%;
+  padding-inline: 10px;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  color-scheme: inherit;
+  font: inherit;
+  font-size: 16px;
+}
+
+.eligibility-selector select:focus-visible,
+[id$="plan-heading"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.result-jump {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 0;
+}
+
+.setup-footer {
+  flex-wrap: wrap;
+}
+
+/* The work table keeps record actions in the same reading order on narrow screens. */
+.work-table-scroll { max-width: 100%; overflow-x: auto; margin-block: 12px; }
+.work-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.work-table th, .work-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.work-table th { font-weight: 500; }
+.work-table th:last-child, .work-table td:last-child { width: 5.5rem; }
+.work-table .text-button { margin: 0; }
+.attention-filter { display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
+.attention-filter input { width: 20px; height: 20px; accent-color: var(--accent); }
+.export-plan { display: inline-flex; align-items: center; }
+.example-overview p, .custom-setup, .plan p, .assignment-list > div,
+.advanced-panel summary, .text-button, .eligibility-option, .eligibility-group legend, .eligibility-selector { font-size: 16px; }
+.advanced-panel summary, .text-button { min-height: 44px; padding-block: 10px; }
+.eligibility-option { border-color: var(--control-border); }
+.eligibility-option[data-selected] .eligibility-check { color: var(--on-accent); }
+@media (max-width: 480px) {
+  .example-overview, .custom-setup, .setup-advanced { margin: 16px; }
+  .work-table th, .work-table td { padding-inline: 4px; }
+}

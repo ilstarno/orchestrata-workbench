@@ -1,0 +1,13 @@
+{
+  "title": "Recipes",
+  "description": "Browse the planning examples available on this server.",
+  "gridLabel": "Recipe results",
+  "searchLabel": "Search recipes",
+  "backToRecipes": "Back to recipes",
+  "exampleHeading": "Example input",
+  "loadingExample": "Loading the recipe example…",
+  "previewError": "Could not load this recipe and its example.",
+  "exampleSafety": "This example uses synthetic data. Running it does not change any external system.",
+  "inputFields": "Input fields",
+  "exampleJson": "View example JSON"
+}

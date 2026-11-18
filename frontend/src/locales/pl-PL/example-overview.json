@@ -1,0 +1,18 @@
+{
+  "scenario": "Trzy zadania rozpoczynają się jednocześnie. Każda osoba może wykonać jedno zadanie.",
+  "nobody": "Nie wybrano nikogo",
+  "preferenceLabel": "Preferencja:",
+  "preference": "Przydziel naprawę windy Alexowi, jeśli nadal można obsadzić wszystkie trzy zadania.",
+  "editEligibility": "Zmień osoby, które mogą wykonać poszczególne zadania",
+  "eligibilityHelp": "Dla każdego zadania wybierz techników, którzy mają wymagane kwalifikacje i są dostępni.",
+  "jobToEdit": "Zadanie do edycji",
+  "jobs": "Zadania",
+  "job": "Zadanie",
+  "eligiblePeople": "Odpowiednie osoby",
+  "actions": "Działania",
+  "edit": "Edytuj",
+  "editJob": "Edytuj: {job}",
+  "attentionOnly": "Wymaga uwagi ({count})",
+  "noAttention": "Żadne zadanie nie wymaga uwagi.",
+  "selectPerson": "Wybierz co najmniej jedną wykwalifikowaną i dostępną osobę do tego zadania."
+}

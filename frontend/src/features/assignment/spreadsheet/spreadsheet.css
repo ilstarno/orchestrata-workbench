@@ -1,0 +1,19 @@
+.spreadsheet-workbench { margin-bottom: 24px; }
+.import-content { padding: 20px; min-width: 0; }
+.import-content p { color: var(--muted); }
+.import-content .error { color: var(--error-text); }
+.import-upload, .import-review { border: 0; padding: 0; margin: 16px 0; min-width: 0; }
+.import-upload > label { display: grid; gap: 8px; margin-bottom: 16px; }
+.import-upload input { max-width: 100%; }
+.import-mapping { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 16px 0; }
+.import-mapping fieldset { border: 1px solid var(--border); padding: 16px; min-width: 0; }
+.import-mapping label, .import-issue label { display: grid; gap: 6px; margin-block: 12px; }
+.import-mapping select, .import-issue input { width: 100%; min-width: 0; min-height: 44px; font: inherit; padding: 8px; background: var(--surface); color: var(--text); border: 1px solid var(--control-border); border-radius: 4px; }
+.import-issue { padding: 12px 0; border-top: 1px solid var(--border); }
+.import-issue form, .import-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.import-issue form label { flex: 1; min-width: min(100%, 12rem); }
+.import-preview { width: 100%; border-collapse: collapse; }
+.import-preview :is(td, th) { padding: 8px; border-bottom: 1px solid var(--border); text-align: left; min-width: 8rem; max-width: 24rem; overflow-wrap: anywhere; }
+.import-preview caption { text-align: left; font-weight: 600; }
+.sample-workflow > summary { min-height: 44px; cursor: pointer; color: var(--accent); margin-bottom: 16px; }
+@media (max-width: 700px) { .import-mapping { grid-template-columns: minmax(0, 1fr); } .import-content { padding: 16px; } }

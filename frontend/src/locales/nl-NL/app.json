@@ -1,0 +1,18 @@
+{
+  "workspace": "Werkruimte voor toewijzingen",
+  "heading": "Wijs taken toe aan de juiste mensen.",
+  "description": "Probeer drie taken met drie monteurs. Bekijk wie elke taak kan uitvoeren zonder iemand dubbel in te plannen.",
+  "setup": "1. Instellen",
+  "exampleHeading": "Voorbeeld: een serviceoproep in de ochtend",
+  "jsonSetupHeading": "Uw JSON-invoer",
+  "jsonSetupNote": "Deze berekening gebruikt uw JSON-invoer in plaats van het voorbeeld.",
+  "editJson": "Bewerk het probleem als JSON",
+  "problemJson": "Probleem in JSON",
+  "noSetup": "Geen instellingen nodig",
+  "reset": "Herstel het voorbeeld",
+  "checking": "Toewijzingen controleren",
+  "runExample": "Voer het voorbeeld uit",
+  "runEdited": "Voer uit met de wijzigingen",
+  "footerBrand": "Orchestrata / Ontwikkelversie",
+  "footerWarning": "Controleer het resultaat voordat u er echt werk mee inplant."
+}

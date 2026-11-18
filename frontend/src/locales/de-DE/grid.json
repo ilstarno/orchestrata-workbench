@@ -1,0 +1,16 @@
+{
+  "loading": "Ergebnisse werden geladen …",
+  "updating": "Ergebnisse werden aktualisiert …",
+  "updatingPrevious": "Ergebnisse werden aktualisiert. Die vorige Seite bleibt sichtbar.",
+  "page": "Seite {page} von {lastPage}.",
+  "resultCountOne": "{count} Ergebnis.",
+  "resultCountFew": "{count} Ergebnisse.",
+  "resultCountMany": "{count} Ergebnisse.",
+  "resultCountOther": "{count} Ergebnisse.",
+  "loadError": "Die Ergebnisse konnten nicht geladen werden.",
+  "retry": "Erneut versuchen",
+  "pagination": "Ergebnisseiten",
+  "previous": "Zurück",
+  "next": "Weiter",
+  "noResults": "Auf dieser Seite gibt es keine Ergebnisse."
+}

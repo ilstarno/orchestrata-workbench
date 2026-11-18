@@ -1,0 +1,18 @@
+{
+  "workspace": "Obszar przydzielania zadań",
+  "heading": "Przydziel zadania odpowiednim osobom.",
+  "description": "Wypróbuj trzy zadania i trzech techników. Sprawdź, kto może wykonać każde zadanie bez nakładających się przydziałów.",
+  "setup": "1. Przygotuj",
+  "exampleHeading": "Przykład: poranne wezwanie serwisowe",
+  "jsonSetupHeading": "Twoje dane JSON",
+  "jsonSetupNote": "To obliczenie użyje Twoich danych JSON zamiast przykładu.",
+  "editJson": "Edytuj problem w formacie JSON",
+  "problemJson": "Problem w formacie JSON",
+  "noSetup": "Nie trzeba nic ustawiać",
+  "reset": "Przywróć przykład",
+  "checking": "Sprawdzanie przydziałów",
+  "runExample": "Uruchom przykład",
+  "runEdited": "Uruchom ze zmianami",
+  "footerBrand": "Orchestrata / Wersja rozwojowa",
+  "footerWarning": "Sprawdź wynik, zanim użyjesz go do planowania rzeczywistej pracy."
+}

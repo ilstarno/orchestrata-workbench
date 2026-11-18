@@ -1,0 +1,18 @@
+{
+  "workspace": "Espace d’affectation",
+  "heading": "Affectez les tâches aux bonnes personnes.",
+  "description": "Essayez avec trois tâches et trois techniciens. Voyez qui peut prendre chaque tâche sans donner deux tâches simultanées à la même personne.",
+  "setup": "1. Préparer",
+  "exampleHeading": "Exemple : une intervention le matin",
+  "jsonSetupHeading": "Vos données JSON",
+  "jsonSetupNote": "Ce calcul utilise vos données JSON à la place de l’exemple.",
+  "editJson": "Modifier le problème en JSON",
+  "problemJson": "Problème au format JSON",
+  "noSetup": "Aucune configuration nécessaire",
+  "reset": "Rétablir l’exemple",
+  "checking": "Vérification des affectations",
+  "runExample": "Exécuter l’exemple",
+  "runEdited": "Exécuter avec les modifications",
+  "footerBrand": "Orchestrata / Version de développement",
+  "footerWarning": "Vérifiez le résultat avant de l’utiliser pour planifier du travail réel."
+}

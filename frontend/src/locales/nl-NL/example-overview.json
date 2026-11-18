@@ -1,0 +1,18 @@
+{
+  "scenario": "Drie klussen beginnen tegelijk. Iedereen kan één klus doen.",
+  "nobody": "Niemand geselecteerd",
+  "preferenceLabel": "Voorkeur:",
+  "preference": "Laat Alex de lift repareren als alle drie de klussen nog kunnen worden uitgevoerd.",
+  "editEligibility": "Wijzig wie elke klus kan uitvoeren",
+  "eligibilityHelp": "Selecteer per klus de bevoegde en beschikbare monteurs.",
+  "jobToEdit": "Opdracht om te wijzigen",
+  "jobs": "Opdrachten",
+  "job": "Opdracht",
+  "eligiblePeople": "Geschikte personen",
+  "actions": "Acties",
+  "edit": "Bewerken",
+  "editJob": "{job} bewerken",
+  "attentionOnly": "Aandacht nodig ({count})",
+  "noAttention": "Geen opdrachten hebben aandacht nodig.",
+  "selectPerson": "Selecteer ten minste één gekwalificeerde, beschikbare persoon voor deze opdracht."
+}

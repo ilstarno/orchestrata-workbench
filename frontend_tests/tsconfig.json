@@ -1,0 +1,9 @@
+{
+  "extends": "../frontend/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "*": ["../frontend/node_modules/@types/*", "../frontend/node_modules/*"]
+    }
+  },
+  "include": ["unit", "integration", "vitest.config.ts"]
+}

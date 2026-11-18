@@ -1,0 +1,35 @@
+.recipe-detail-link {
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.recipe-detail-link:focus-visible,
+.recipe-workbench h1:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.recipe-preview {
+  padding: 0 24px 24px;
+  min-width: 0;
+}
+
+.recipe-preview p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.recipe-preview .result-json {
+  max-height: 18rem;
+}
+
+.recipe-preview summary,
+.recipe-workbench .primary-button {
+  min-height: 44px;
+}
+
+.recipe-preview summary {
+  padding-block: 12px;
+}

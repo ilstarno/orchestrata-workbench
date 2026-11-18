@@ -1,0 +1,13 @@
+{
+  "title": "Planungsvorlagen",
+  "description": "Sehen Sie sich die Planungsbeispiele auf diesem Server an.",
+  "gridLabel": "Gefundene Planungsvorlagen",
+  "searchLabel": "Planungsvorlagen suchen",
+  "backToRecipes": "Zurück zu den Beispielen",
+  "exampleHeading": "Beispieldaten",
+  "loadingExample": "Das Beispiel wird geladen…",
+  "previewError": "Das Beispiel konnte nicht geladen werden.",
+  "exampleSafety": "Dieses Beispiel verwendet Beispieldaten. Beim Ausführen wird in anderen Systemen nichts geändert.",
+  "inputFields": "Eingabefelder",
+  "exampleJson": "JSON-Beispiel ansehen"
+}

@@ -1,0 +1,18 @@
+{
+  "workspace": "Assignment workspace",
+  "heading": "Assign jobs to the right people.",
+  "description": "Try three jobs and three technicians. See who can take each job without double-booking anyone.",
+  "setup": "1. Set up",
+  "exampleHeading": "Example: A morning service callout",
+  "jsonSetupHeading": "Your JSON setup",
+  "jsonSetupNote": "This run will use your JSON instead of the example.",
+  "editJson": "Edit problem as JSON",
+  "problemJson": "Problem JSON",
+  "noSetup": "No setup needed",
+  "reset": "Reset to example",
+  "checking": "Checking assignments",
+  "runExample": "Run example",
+  "runEdited": "Run edited setup",
+  "footerBrand": "Orchestrata / Development preview",
+  "footerWarning": "Check the result before using it to schedule real work."
+}

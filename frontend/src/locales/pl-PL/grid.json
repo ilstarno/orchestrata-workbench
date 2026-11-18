@@ -1,0 +1,16 @@
+{
+  "loading": "Wczytywanie wyników…",
+  "updating": "Aktualizowanie wyników…",
+  "updatingPrevious": "Trwa aktualizacja wyników. Nadal widać poprzednią stronę.",
+  "page": "Strona {page} z {lastPage}.",
+  "resultCountOne": "{count} wynik.",
+  "resultCountFew": "{count} wyniki.",
+  "resultCountMany": "{count} wyników.",
+  "resultCountOther": "{count} wyniku.",
+  "loadError": "Nie udało się wczytać wyników.",
+  "retry": "Spróbuj ponownie",
+  "pagination": "Strony wyników",
+  "previous": "Poprzednia",
+  "next": "Następna",
+  "noResults": "Brak wyników na tej stronie."
+}

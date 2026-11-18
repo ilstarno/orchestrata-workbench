@@ -5,5 +5,5 @@
       "*": ["../frontend/node_modules/@types/*", "../frontend/node_modules/*"]
     }
   },
-  "include": ["unit", "integration", "vitest.config.ts"]
+  "include": ["unit", "integration", "vitest.config.ts", "types"]
 }

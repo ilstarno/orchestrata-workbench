@@ -27,5 +27,22 @@
   "confirm": "Potwierdzam te identyfikatory, kolumny i wartości",
   "export": "Eksportuj przygotowane dane",
   "unavailable": "Tylko przygotowanie danych. Wykonanie pakietu nie jest połączone z uwierzytelnioną usługą w tej aplikacji. Żaden plan nie został wykonany.",
-  "run": "Uruchom pakiet"
+  "run": "Uruchom pakiet",
+  "localHeading": "Lokalny plan konserwacji",
+  "localDetail": "Uruchamia dołączony bezpłatny pakiet na tym urządzeniu. Pliki nie są wysyłane na serwer. Limit czasu: 10 sekund.",
+  "localRun": "Uruchom lokalnie",
+  "localRunning": "Uruchamianie lokalne…",
+  "localCancel": "Anuluj",
+  "localTimeout": "Przekroczono 10 sekund. Zmniejsz dane i spróbuj ponownie.",
+  "localFailed": "Uruchomienie nie powiodło się. Sprawdź dane i spróbuj ponownie.",
+  "localPrevious": "Poprzedni poprawny plan",
+  "localResult": "Wynik lokalnego planu",
+  "localAssigned": "przypisanych",
+  "localCents": "centów",
+  "localMinutes": "minut",
+  "localOrder": "Zlecenie",
+  "localTechnician": "Technik",
+  "localUnassigned": "Nieprzypisane",
+  "localExport": "Eksportuj plan CSV",
+  "localLicense": "Licencje silnika i pakietu"
 }

@@ -27,5 +27,22 @@
   "confirm": "Ik bevestig deze identificaties, kolommen en waarden",
   "export": "Voorbereide invoer exporteren",
   "unavailable": "Alleen invoervoorbereiding. Pakketuitvoering is in deze toepassing niet verbonden met een geauthenticeerde dienst. Er is geen plan uitgevoerd.",
-  "run": "Pakket uitvoeren"
+  "run": "Pakket uitvoeren",
+  "localHeading": "Lokaal onderhoudsplan",
+  "localDetail": "Voert het meegeleverde gratis onderhoudspakket uit op dit apparaat. Bestanden gaan niet naar een server. Maximale looptijd: 10 seconden.",
+  "localRun": "Lokaal uitvoeren",
+  "localRunning": "Lokaal bezig…",
+  "localCancel": "Annuleren",
+  "localTimeout": "De uitvoering duurde langer dan 10 seconden. Verklein de invoer en probeer opnieuw.",
+  "localFailed": "Lokale uitvoering mislukt. Controleer de invoer en probeer opnieuw.",
+  "localPrevious": "Vorig geslaagd plan",
+  "localResult": "Lokaal planresultaat",
+  "localAssigned": "toegewezen",
+  "localCents": "cent",
+  "localMinutes": "minuten",
+  "localOrder": "Werkorder",
+  "localTechnician": "Technicus",
+  "localUnassigned": "Niet toegewezen",
+  "localExport": "Plan als CSV exporteren",
+  "localLicense": "Engine- en pakketlicenties"
 }

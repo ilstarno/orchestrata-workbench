@@ -27,5 +27,22 @@
   "confirm": "Confermo questi identificativi, colonne e valori",
   "export": "Esporta i dati preparati",
   "unavailable": "Solo preparazione dei dati. L’esecuzione del pacchetto non è collegata a un servizio autenticato in questa applicazione. Nessun piano è stato calcolato.",
-  "run": "Esegui pacchetto"
+  "run": "Esegui pacchetto",
+  "localHeading": "Piano di manutenzione locale",
+  "localDetail": "Esegue il pacchetto di manutenzione gratuito incluso su questo dispositivo. I file non vengono inviati a un server. Durata massima: 10 secondi.",
+  "localRun": "Esegui in locale",
+  "localRunning": "Esecuzione locale…",
+  "localCancel": "Annulla",
+  "localTimeout": "Esecuzione oltre 10 secondi. Riduci i dati e riprova.",
+  "localFailed": "Esecuzione locale non riuscita. Controlla i dati e riprova.",
+  "localPrevious": "Ultimo piano riuscito",
+  "localResult": "Risultato del piano locale",
+  "localAssigned": "assegnati",
+  "localCents": "centesimi",
+  "localMinutes": "minuti",
+  "localOrder": "Ordine di lavoro",
+  "localTechnician": "Tecnico",
+  "localUnassigned": "Non assegnato",
+  "localExport": "Esporta piano CSV",
+  "localLicense": "Licenze del motore e del pacchetto"
 }

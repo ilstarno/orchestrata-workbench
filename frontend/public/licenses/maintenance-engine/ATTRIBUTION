@@ -1,0 +1,5 @@
+Orchestrata Engine mathematical v1 runtime, source revision c4e529b81dc2466ecb2c193b119632dc4dddadd9, Apache-2.0.
+WASM adapter built using Rust 1.100.0 and wasm-bindgen 0.2.130. Generated JavaScript retained unchanged; application adds digest verification, a dedicated worker and a termination deadline.
+Maintenance-shift package v1.0.0 from Orchestrata Recipes revision 10ac8261727e3b024e277fbc0a5240815d6e40d2, Apache-2.0. Embedded package retains its original attribution and terms.
+Source repositories: https://github.com/ilstarno/orchestrata-engine and https://github.com/ilstarno/orchestrata-recipes
+Runtime and dependency license texts accompany this file. No upstream Engine NOTICE was present at the cited revision.

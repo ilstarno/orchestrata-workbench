@@ -27,5 +27,22 @@
   "confirm": "I confirm these identifiers, columns and values",
   "export": "Export prepared input",
   "unavailable": "Input preparation only. Package execution is not connected to an authenticated service in this application. No plan has been run.",
-  "run": "Run package"
+  "run": "Run package",
+  "localHeading": "Local maintenance plan",
+  "localDetail": "Runs the bundled free maintenance package on this device. Files are not sent to a server. Maximum run time: 10 seconds.",
+  "localRun": "Run locally",
+  "localRunning": "Running locally…",
+  "localCancel": "Cancel",
+  "localTimeout": "The local run exceeded 10 seconds. Reduce the input and retry.",
+  "localFailed": "The local run failed. Check the input and retry.",
+  "localPrevious": "Previous successful plan",
+  "localResult": "Local plan result",
+  "localAssigned": "assigned",
+  "localCents": "cents",
+  "localMinutes": "minutes",
+  "localOrder": "Work order",
+  "localTechnician": "Technician",
+  "localUnassigned": "Unassigned",
+  "localExport": "Export plan CSV",
+  "localLicense": "Engine and package licenses"
 }

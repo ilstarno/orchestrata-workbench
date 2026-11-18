@@ -27,5 +27,22 @@
   "confirm": "Je confirme ces identifiants, colonnes et valeurs",
   "export": "Exporter les données préparées",
   "unavailable": "Préparation des données uniquement. L’exécution du paquet n’est pas connectée à un service authentifié dans cette application. Aucun plan n’a été calculé.",
-  "run": "Exécuter le paquet"
+  "run": "Exécuter le paquet",
+  "localHeading": "Plan de maintenance local",
+  "localDetail": "Exécute le paquet de maintenance gratuit inclus sur cet appareil. Aucun fichier envoyé au serveur. Durée maximale : 10 secondes.",
+  "localRun": "Exécuter localement",
+  "localRunning": "Exécution locale…",
+  "localCancel": "Annuler",
+  "localTimeout": "La durée dépasse 10 secondes. Réduisez les données et réessayez.",
+  "localFailed": "Échec de l’exécution locale. Vérifiez les données et réessayez.",
+  "localPrevious": "Dernier plan réussi",
+  "localResult": "Résultat du plan local",
+  "localAssigned": "affectés",
+  "localCents": "centimes",
+  "localMinutes": "minutes",
+  "localOrder": "Ordre de travail",
+  "localTechnician": "Technicien",
+  "localUnassigned": "Non affecté",
+  "localExport": "Exporter le plan CSV",
+  "localLicense": "Licences du moteur et du paquet"
 }

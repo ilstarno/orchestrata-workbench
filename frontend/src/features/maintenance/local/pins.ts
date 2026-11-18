@@ -1,0 +1,8 @@
+export const WASM_SHA256 = 'f144420403bc07daec6503b08a0789b047f9b9ad4d77cce48a2448f6527102c4'
+export const PACKAGE_SHA256 = '8cde0508bdf5bbe14fa5ebc78a4ffe4a216d6de40f4fe0cf2d306a00fff53165'
+export const CONTENT_IDENTITY = 'c491013d3969b76ce029dee4747f6b68368190ac44042a081649fb9b39eb5769'
+export const EXECUTION_IDENTITY = {
+  cost: '7aa894377f8c767ca41282b0dc269b4bd4697eea7b98254a834eaaaa811f59c3',
+  delay: '734d2640cb2861840cdbf4d1b92c1fcef8e9f8bdd9b11c83d3467ada5b2f4965',
+} as const
+export const DEADLINE_MS = 10000

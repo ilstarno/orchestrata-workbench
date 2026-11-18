@@ -1,3 +1,7 @@
+import { webcrypto } from "node:crypto";
+import { createEngine } from "../../frontend/src/features/maintenance/local/engine";
+import { executeLocal } from "../../frontend/src/features/maintenance/local/execute-local";
+import type { LocalRequest } from "../../frontend/src/features/maintenance/local/local-request";
 // @vitest-environment jsdom
 import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
@@ -110,8 +114,8 @@ it.each(["xlsx", "csv", "records"])(
     );
     await change(host.querySelector("select")!, "delay");
     expect(host.textContent).toContain("not elapsed shift time");
-    expect(button("Run package").disabled).toBe(true);
-    expect(host.textContent).toContain("No plan has been run");
+    expect(button("Run locally").disabled).toBe(false);
+    expect(host.textContent).toContain("Files are not sent to a server");
     expect(fetcher).not.toHaveBeenCalled();
   },
 );
@@ -156,7 +160,7 @@ it("corrects only flagged normalized fields and retains confirmed input after a 
     host.querySelector<HTMLAnchorElement>(".maintenance-export")!.href,
   ).toBe(previous);
 });
-it("translates controls and unavailable execution while preserving contract field names", async () => {
+it("translates controls and local execution while preserving contract field names", async () => {
   await act(async () =>
     root.render(
       <LocaleProvider initialLocale="fr-FR">
@@ -165,5 +169,119 @@ it("translates controls and unavailable execution while preserving contract fiel
     ),
   );
   expect(host.textContent).toContain("Point d’entrée");
-  expect(host.textContent).toContain("Aucun plan n’a été calculé");
+  expect(host.textContent).toContain("Aucun fichier envoyé au serveur");
 });
+
+it.each(["xlsx", "csv", "records"])(
+  "runs user-selected %s through the real Engine for both objectives and exports retained results",
+  async (source) => {
+    vi.stubGlobal("crypto", webcrypto);
+    const solve = await createEngine(
+      new Uint8Array(
+        readFileSync(
+          resolve("src/features/maintenance/local/assets/package-runtime.wasm"),
+        ),
+      ),
+      new Uint8Array(
+        readFileSync(
+          resolve(
+            "src/features/maintenance/local/assets/maintenance-shift.orcpkg",
+          ),
+        ),
+      ),
+    );
+    const sent: LocalRequest[] = [];
+    let fail = false;
+    class EngineWorker {
+      onmessage: ((event: MessageEvent) => void) | null = null;
+      onerror: (() => void) | null = null;
+      onmessageerror = null;
+      stopped = false;
+      terminate() {
+        this.stopped = true;
+      }
+      postMessage(request: LocalRequest) {
+        sent.push(request);
+        if (fail) {
+          queueMicrotask(() => this.onerror?.());
+          return;
+        }
+        void executeLocal(request, solve).then((plan) => {
+          if (!this.stopped)
+            this.onmessage?.({ data: { plan } } as MessageEvent);
+        });
+      }
+    }
+    vi.stubGlobal("Worker", EngineWorker);
+    await change(host.querySelectorAll("select")[1], source);
+    if (source === "csv")
+      for (const [i, name] of [
+        "work_orders.csv",
+        "technicians.csv",
+        "eligibility.csv",
+      ].entries())
+        await upload(i, name);
+    else
+      await upload(
+        0,
+        source === "xlsx" ? "maintenance.xlsx" : "connector-records.json",
+      );
+    await review();
+    await click(confirmation());
+    const csv = () =>
+      [...host.querySelectorAll<HTMLAnchorElement>("a")].find((a) =>
+        a.download.endsWith("-plan.csv"),
+      )!;
+    for (const [objective, total] of [
+      ["cost", "14600"],
+      ["delay", "292"],
+    ]) {
+      await change(host.querySelector("select")!, objective);
+      await click(button("Run locally"));
+      await vi.waitFor(async () => {
+        await act(tick);
+        expect(host.textContent).toContain("Local plan result");
+        expect(csv()).toBeDefined();
+      });
+      expect(host.textContent).toContain(total);
+      expect(decodeURIComponent(csv().href)).toContain("hv-isolator");
+      expect(decodeURIComponent(csv().href)).toContain("unassigned");
+    }
+    expect(sent.map((r) => r.objective)).toEqual(["cost", "delay"]);
+    expect(sent[0].records).toEqual(exported());
+    const previous = csv().href;
+    fail = true;
+    await click(button("Run locally"));
+    await vi.waitFor(async () => {
+      await act(tick);
+      expect(host.textContent).toContain("The local run failed");
+    });
+    expect(host.textContent).toContain("Previous successful plan");
+    expect(csv().href).toBe(previous);
+    // A caller's own replacement IDs must flow through the mapper and Engine.
+    await change(host.querySelectorAll("select")[1], "records");
+    const own = {
+      work_orders: [{ id: "my-pump" }],
+      technicians: [{ id: "my-tech", capacity_slots: 1, available: true }],
+      eligibility: [
+        {
+          work_order_id: "my-pump",
+          technician_id: "my-tech",
+          cost_cents: 17,
+          delay_minutes: 4,
+        },
+      ],
+    };
+    await upload(0, "my-export.json", Buffer.from(JSON.stringify(own)));
+    await review();
+    await click(confirmation());
+    fail = false;
+    await click(button("Run locally"));
+    await vi.waitFor(async () => {
+      await act(tick);
+      expect(decodeURIComponent(csv().href)).toContain("my-pump");
+    });
+    expect(decodeURIComponent(csv().href)).toContain("my-tech");
+    expect(sent.at(-1)!.records).toEqual(own);
+  },
+);

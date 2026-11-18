@@ -1,3 +1,4 @@
+import { LocalRunPanel } from './local/local-run-panel'
 import { useLayoutEffect, useRef, useState } from 'react'
 import { useLocale } from '../../shared/i18n/locale-context'
 import { headers, sourceRows, type Workbook } from '../assignment/spreadsheet/workbook'
@@ -396,17 +397,12 @@ export function MaintenanceWorkbench() {
             )}
           </fieldset>
         )}
-        <p className="muted" id="maintenance-run-status">
-          {t('maintenance', 'unavailable')}
-        </p>
-        <button
-          className="primary-button"
-          type="button"
-          disabled
-          aria-describedby="maintenance-run-status"
-        >
-          {t('maintenance', 'run')}
-        </button>
+        <LocalRunPanel
+          records={review && review.issues.length === 0 ? review.records : undefined}
+          confirmed={confirmed}
+          source={draft?.names ?? ''}
+          objective={entrypoint}
+        />
       </div>
     </section>
   )

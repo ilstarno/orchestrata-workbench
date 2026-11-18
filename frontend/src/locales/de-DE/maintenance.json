@@ -27,5 +27,22 @@
   "confirm": "Ich bestätige diese Kennungen, Spalten und Werte",
   "export": "Vorbereitete Eingabe exportieren",
   "unavailable": "Nur Eingabevorbereitung. Die Paketausführung ist in dieser Anwendung nicht mit einem authentifizierten Dienst verbunden. Es wurde kein Plan berechnet.",
-  "run": "Paket ausführen"
+  "run": "Paket ausführen",
+  "localHeading": "Lokaler Wartungsplan",
+  "localDetail": "Führt das enthaltene kostenlose Wartungspaket auf diesem Gerät aus. Dateien werden nicht an einen Server gesendet. Höchstdauer: 10 Sekunden.",
+  "localRun": "Lokal ausführen",
+  "localRunning": "Lokale Ausführung…",
+  "localCancel": "Abbrechen",
+  "localTimeout": "Die Ausführung überschritt 10 Sekunden. Datenmenge reduzieren und erneut versuchen.",
+  "localFailed": "Lokale Ausführung fehlgeschlagen. Eingaben prüfen und erneut versuchen.",
+  "localPrevious": "Letzter erfolgreicher Plan",
+  "localResult": "Lokales Planergebnis",
+  "localAssigned": "zugewiesen",
+  "localCents": "Cent",
+  "localMinutes": "Minuten",
+  "localOrder": "Arbeitsauftrag",
+  "localTechnician": "Techniker",
+  "localUnassigned": "Nicht zugewiesen",
+  "localExport": "Plan als CSV exportieren",
+  "localLicense": "Engine- und Paketlizenzen"
 }

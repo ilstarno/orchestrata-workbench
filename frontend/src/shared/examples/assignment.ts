@@ -21,7 +21,9 @@ export const exampleDefinition = JSON.stringify(assignmentExample, null, 2)
 
 export type Eligibility = ReadonlyArray<ReadonlyArray<number>>
 
-export const exampleEligibility: Eligibility = assignmentExample.variables.map(({ domain }) => domain)
+export const exampleEligibility: Eligibility = assignmentExample.variables.map(
+  ({ domain }) => domain,
+)
 
 export function changeEligibility(
   eligibility: Eligibility,
@@ -33,21 +35,25 @@ export function changeEligibility(
 
   return eligibility.map((domain, index) => {
     if (index !== job) return domain
-    if (!eligible) return domain.filter(id => id !== technician)
+    if (!eligible) return domain.filter((id) => id !== technician)
     if (domain.includes(technician)) return domain
 
     const selected = new Set([...domain, technician])
     const order = new Set([...exampleEligibility[index], ...exampleTechnicians.keys()])
-    return [...order].filter(id => selected.has(id))
+    return [...order].filter((id) => selected.has(id))
   })
 }
 
 export function serializeEligibility(eligibility: Eligibility): string {
-  return JSON.stringify({
-    ...assignmentExample,
-    variables: assignmentExample.variables.map((variable, index) => ({
-      ...variable,
-      domain: eligibility[index],
-    })),
-  }, null, 2)
+  return JSON.stringify(
+    {
+      ...assignmentExample,
+      variables: assignmentExample.variables.map((variable, index) => ({
+        ...variable,
+        domain: eligibility[index],
+      })),
+    },
+    null,
+    2,
+  )
 }

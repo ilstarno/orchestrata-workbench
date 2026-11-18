@@ -1,5 +1,27 @@
-.maintenance-select { display: grid; gap: 8px; margin-block: 16px; max-width: 32rem; }
-.maintenance-select select { min-height: 44px; min-width: 0; max-width: 100%; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--control-border); border-radius: 4px; padding: 8px; }
-.maintenance-workbench .import-mapping { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
-.maintenance-workbench details { margin-block: 16px; }
-.maintenance-workbench small { font-size: .8em; color: var(--muted); }
+.maintenance-select {
+  display: grid;
+  gap: 8px;
+  margin-block: 16px;
+  max-width: 32rem;
+}
+.maintenance-select select {
+  min-height: 44px;
+  min-width: 0;
+  max-width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--control-border);
+  border-radius: 4px;
+  padding: 8px;
+}
+.maintenance-workbench .import-mapping {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+.maintenance-workbench details {
+  margin-block: 16px;
+}
+.maintenance-workbench small {
+  font-size: 0.8em;
+  color: var(--muted);
+}

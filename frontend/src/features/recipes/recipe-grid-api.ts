@@ -1,5 +1,9 @@
 import createClient from 'openapi-fetch'
-import { recipeGridSortValues, type components, type paths } from '../../shared/api/generated/orchestrata'
+import {
+  recipeGridSortValues,
+  type components,
+  type paths,
+} from '../../shared/api/generated/orchestrata'
 import type { GridDataSource } from '../grid/grid-contract'
 
 const recipeGridPath = '/api/v1/recipes/grid' satisfies keyof paths
@@ -8,13 +12,13 @@ type RecipeGridQuery = NonNullable<paths[typeof recipeGridPath]['get']['paramete
 type RecipeGridSort = components['schemas']['RecipeGridSort']
 
 function isSortKey(value: string): value is RecipeGridSort {
-  return recipeGridSortValues.some(key => key === value)
+  return recipeGridSortValues.some((key) => key === value)
 }
 
 export function createRecipeGridSource(baseUrl = ''): GridDataSource<RecipeGridSort> {
   const client = createClient<paths>({
     baseUrl,
-    fetch: request => fetch(request),
+    fetch: (request) => fetch(request),
     headers: { Accept: 'application/json' },
   })
 
@@ -31,15 +35,21 @@ export function createRecipeGridSource(baseUrl = ''): GridDataSource<RecipeGridS
       }
       const { data, response } = await client.GET(recipeGridPath, { signal, params: { query } })
       if (!response.ok || !data) throw new Error('Grid request failed')
-      const columns = data.columns.map(column => ({
+      const columns = data.columns.map((column) => ({
         ...column,
         sortable: column.sortable && isSortKey(column.id),
       }))
-      const rows = data.items.map(item => ({
+      const rows = data.items.map((item) => ({
         id: item.id,
-        cells: Object.fromEntries(columns.map(column => [column.id, item[column.id]])),
+        cells: Object.fromEntries(columns.map((column) => [column.id, item[column.id]])),
       }))
-      return { columns, rows, page: data.page, pageSize: data.page_size, totalItems: data.total_items }
+      return {
+        columns,
+        rows,
+        page: data.page,
+        pageSize: data.page_size,
+        totalItems: data.total_items,
+      }
     },
   }
 }

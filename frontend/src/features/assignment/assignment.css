@@ -109,12 +109,15 @@
   color: #f58b8b;
 }
 
-.shell[data-theme=light] .plan-error h3 {
+.shell[data-theme='light'] .plan-error h3 {
   color: #9b1f30;
 }
 
 @media (max-width: 380px) {
-  .setup-footer { align-items: flex-start; flex-direction: column; }
+  .setup-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .eligibility-group {
@@ -199,7 +202,7 @@
 }
 
 .eligibility-selector select:focus-visible,
-[id$="plan-heading"]:focus-visible {
+[id$='plan-heading']:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -216,21 +219,80 @@
 }
 
 /* The work table keeps record actions in the same reading order on narrow screens. */
-.work-table-scroll { max-width: 100%; overflow-x: auto; margin-block: 12px; }
-.work-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-.work-table th, .work-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
-.work-table th { font-weight: 500; }
-.work-table th:last-child, .work-table td:last-child { width: 5.5rem; }
-.work-table .text-button { margin: 0; }
-.attention-filter { display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
-.attention-filter input { width: 20px; height: 20px; accent-color: var(--accent); }
-.export-plan { display: inline-flex; align-items: center; }
-.example-overview p, .custom-setup, .plan p, .assignment-list > div,
-.advanced-panel summary, .text-button, .eligibility-option, .eligibility-group legend, .eligibility-selector { font-size: 16px; }
-.advanced-panel summary, .text-button { min-height: 44px; padding-block: 10px; }
-.eligibility-option { border-color: var(--control-border); }
-.eligibility-option[data-selected] .eligibility-check { color: var(--on-accent); }
+.work-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: 12px;
+}
+.work-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.work-table th,
+.work-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.work-table th {
+  font-weight: 500;
+}
+.work-table th:last-child,
+.work-table td:last-child {
+  width: 5.5rem;
+}
+.work-table .text-button {
+  margin: 0;
+}
+.attention-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  cursor: pointer;
+}
+.attention-filter input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+}
+.export-plan {
+  display: inline-flex;
+  align-items: center;
+}
+.example-overview p,
+.custom-setup,
+.plan p,
+.assignment-list > div,
+.advanced-panel summary,
+.text-button,
+.eligibility-option,
+.eligibility-group legend,
+.eligibility-selector {
+  font-size: 16px;
+}
+.advanced-panel summary,
+.text-button {
+  min-height: 44px;
+  padding-block: 10px;
+}
+.eligibility-option {
+  border-color: var(--control-border);
+}
+.eligibility-option[data-selected] .eligibility-check {
+  color: var(--on-accent);
+}
 @media (max-width: 480px) {
-  .example-overview, .custom-setup, .setup-advanced { margin: 16px; }
-  .work-table th, .work-table td { padding-inline: 4px; }
+  .example-overview,
+  .custom-setup,
+  .setup-advanced {
+    margin: 16px;
+  }
+  .work-table th,
+  .work-table td {
+    padding-inline: 4px;
+  }
 }

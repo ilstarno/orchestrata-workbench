@@ -103,7 +103,7 @@
 }
 
 .server-grid button:disabled {
-  opacity: .55;
+  opacity: 0.55;
   cursor: default;
 }
 
@@ -120,7 +120,17 @@
   border-top: 1px solid var(--border);
 }
 
-.server-grid__button, .server-grid__sort { min-height: 44px; }
-.server-grid__button, .server-grid__search { border-color: var(--control-border); }
-.server-grid__search input { min-height: 44px; }
-.server-grid table { font-variant-numeric: tabular-nums; }
+.server-grid__button,
+.server-grid__sort {
+  min-height: 44px;
+}
+.server-grid__button,
+.server-grid__search {
+  border-color: var(--control-border);
+}
+.server-grid__search input {
+  min-height: 44px;
+}
+.server-grid table {
+  font-variant-numeric: tabular-nums;
+}

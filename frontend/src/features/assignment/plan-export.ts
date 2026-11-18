@@ -8,12 +8,18 @@ function csvCell(value: string | number): string {
   return `"${safe.replaceAll('"', '""')}"`
 }
 
-export function planCsv(result: SolveResult, example: boolean, headings: readonly [string, string]): string | undefined {
+export function planCsv(
+  result: SolveResult,
+  example: boolean,
+  headings: readonly [string, string],
+): string | undefined {
   if (result.kind !== 'solved') return undefined
   const rows: (string | number)[][] = [Array.from(headings)]
-  result.assignment.values.forEach((value, index) => rows.push([
-    example ? exampleJobs[index] ?? index + 1 : index + 1,
-    example ? exampleTechnicians.get(value) ?? value : value,
-  ]))
-  return '\uFEFF' + rows.map(row => row.map(csvCell).join(',')).join('\r\n') + '\r\n'
+  result.assignment.values.forEach((value, index) =>
+    rows.push([
+      example ? (exampleJobs[index] ?? index + 1) : index + 1,
+      example ? (exampleTechnicians.get(value) ?? value) : value,
+    ]),
+  )
+  return '\uFEFF' + rows.map((row) => row.map(csvCell).join(',')).join('\r\n') + '\r\n'
 }

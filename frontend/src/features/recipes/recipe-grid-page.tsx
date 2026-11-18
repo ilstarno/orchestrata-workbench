@@ -11,7 +11,11 @@ import '../../styles.css'
 
 function renderRecipeCell(row: GridRow, columnId: string) {
   if (columnId !== 'title' || typeof row.cells.title !== 'string') return undefined
-  return <Link className="recipe-link" to="/recipes/$recipeId" params={{ recipeId: row.id }}>{row.cells.title}</Link>
+  return (
+    <Link className="recipe-link" to="/recipes/$recipeId" params={{ recipeId: row.id }}>
+      {row.cells.title}
+    </Link>
+  )
 }
 
 export function RecipeGridPage() {
@@ -22,18 +26,34 @@ export function RecipeGridPage() {
   useEffect(() => heading.current?.focus(), [])
   return (
     <div className="shell" data-theme={theme}>
-      <WorkbenchHeader active="recipes" mainId="recipe-work" navigation={<>
-        <Link to="/">{t('app-shell', 'assignment')}</Link>
-        <Link to="/recipes" aria-current="page">{t('app-shell', 'recipes')}</Link>
-      </>} />
+      <WorkbenchHeader
+        active="recipes"
+        mainId="recipe-work"
+        navigation={
+          <>
+            <Link to="/">{t('app-shell', 'assignment')}</Link>
+            <Link to="/recipes" aria-current="page">
+              {t('app-shell', 'recipes')}
+            </Link>
+          </>
+        }
+      />
       <main className="content" id="recipe-work" tabIndex={-1}>
         <div className="heading">
           <div>
-            <h1 ref={heading} tabIndex={-1}>{t('recipe-grid', 'title')}</h1>
+            <h1 ref={heading} tabIndex={-1}>
+              {t('recipe-grid', 'title')}
+            </h1>
             <p>{t('recipe-grid', 'description')}</p>
           </div>
         </div>
-        <ServerGrid controls={controls} source={recipeGridSource} title={t('recipe-grid', 'gridLabel')} searchLabel={t('recipe-grid', 'searchLabel')} renderCell={renderRecipeCell} />
+        <ServerGrid
+          controls={controls}
+          source={recipeGridSource}
+          title={t('recipe-grid', 'gridLabel')}
+          searchLabel={t('recipe-grid', 'searchLabel')}
+          renderCell={renderRecipeCell}
+        />
       </main>
     </div>
   )

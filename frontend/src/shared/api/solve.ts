@@ -36,7 +36,10 @@ const indexedFailures = {
 export type SolveErrorCode = keyof typeof indexedFailures
 
 export class SolveError extends Error {
-  constructor(readonly kind: SolveFailure, readonly code?: SolveErrorCode) {
+  constructor(
+    readonly kind: SolveFailure,
+    readonly code?: SolveErrorCode,
+  ) {
     super(kind)
     this.name = 'SolveError'
   }
@@ -51,15 +54,17 @@ function isInteger(value: unknown): value is number {
 }
 
 function isAssignment(value: unknown): value is Assignment {
-  return isRecord(value)
-    && Array.isArray(value.values)
-    && value.values.every(isInteger)
-    && isRecord(value.score)
-    && value.score.hard === 0
-    && isInteger(value.score.soft)
-    && value.score.soft <= 0
-    && isInteger(value.evaluated)
-    && value.evaluated > 0
+  return (
+    isRecord(value) &&
+    Array.isArray(value.values) &&
+    value.values.every(isInteger) &&
+    isRecord(value.score) &&
+    value.score.hard === 0 &&
+    isInteger(value.score.soft) &&
+    value.score.soft <= 0 &&
+    isInteger(value.evaluated) &&
+    value.evaluated > 0
+  )
 }
 
 export function parseSolveResult(raw: string): SolveResult {
@@ -76,7 +81,9 @@ export function parseSolveResult(raw: string): SolveResult {
   if (!isAssignment(solution)) throw new SolveError('unexpected-response')
 
   // The backend permits 64-bit integers. Preserve the wire text rather than display rounded numbers.
-  const safeIntegers = [...solution.values, solution.score.soft, solution.evaluated].every(Number.isSafeInteger)
+  const safeIntegers = [...solution.values, solution.score.soft, solution.evaluated].every(
+    Number.isSafeInteger,
+  )
   if (!safeIntegers) return { kind: 'exact-json', json: raw }
 
   return { kind: 'solved', assignment: solution }

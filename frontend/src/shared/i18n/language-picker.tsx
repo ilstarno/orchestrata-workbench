@@ -14,10 +14,14 @@ export function LanguagePicker() {
         <Languages size={18} aria-hidden />
         <span className="sr-only">{t('language', 'label')}</span>
       </label>
-      <select id={id} value={locale} onChange={event => {
-        if (isLocale(event.currentTarget.value)) setLocale(event.currentTarget.value)
-      }}>
-        {supportedLocales.map(option => (
+      <select
+        id={id}
+        value={locale}
+        onChange={(event) => {
+          if (isLocale(event.currentTarget.value)) setLocale(event.currentTarget.value)
+        }}
+      >
+        {supportedLocales.map((option) => (
           <option key={option} value={option} lang={option}>
             {translate(option, 'language', option)}
           </option>

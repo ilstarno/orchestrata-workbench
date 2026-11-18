@@ -1,0 +1,8 @@
+/src/shared/api/generated/
+**/*.md
+**/*.snap
+**/__snapshots__/
+**/node_modules/
+**/dist/
+**/coverage/
+../frontend_tests/fixtures/

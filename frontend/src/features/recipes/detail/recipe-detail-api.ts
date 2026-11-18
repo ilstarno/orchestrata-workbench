@@ -6,7 +6,7 @@ import { parseRecipePreview } from './recipe-preview'
 export function createRecipeDetailApi(baseUrl = '') {
   const client = createClient<paths>({
     baseUrl,
-    fetch: request => fetch(request),
+    fetch: (request) => fetch(request),
     headers: { Accept: 'application/json' },
   })
 

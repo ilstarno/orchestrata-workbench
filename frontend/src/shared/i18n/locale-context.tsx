@@ -11,7 +11,13 @@ interface LocaleContext {
 
 const Context = createContext<LocaleContext>({ locale: defaultLocale, setLocale: () => undefined })
 
-export function LocaleProvider({ children, initialLocale }: { children: ReactNode; initialLocale?: Locale }) {
+export function LocaleProvider({
+  children,
+  initialLocale,
+}: {
+  children: ReactNode
+  initialLocale?: Locale
+}) {
   const [locale, setLocale] = useState<Locale>(() => initialLocale ?? restoreLocale())
   useEffect(() => {
     document.documentElement.lang = locale
@@ -30,8 +36,11 @@ export function useLocale() {
   return {
     locale,
     setLocale,
-    t: <Component extends MessageComponent>(component: Component, key: MessageKey<Component>, values?: FormatValues) =>
-      translate(locale, component, key, values),
+    t: <Component extends MessageComponent>(
+      component: Component,
+      key: MessageKey<Component>,
+      values?: FormatValues,
+    ) => translate(locale, component, key, values),
   }
 }
 

@@ -47,7 +47,8 @@ function RecipeWorkbench({ recipeId }: { recipeId: string }) {
     activeRun.current = controller
     try {
       const checkedResult = await run.mutateAsync(controller.signal)
-      if (activeRun.current === controller && !controller.signal.aborted) setLastResult(checkedResult)
+      if (activeRun.current === controller && !controller.signal.aborted)
+        setLastResult(checkedResult)
     } catch {
       // PlanResult presents the decoded API failure.
     } finally {
@@ -57,15 +58,27 @@ function RecipeWorkbench({ recipeId }: { recipeId: string }) {
 
   return (
     <div className="shell" data-theme={theme}>
-      <WorkbenchHeader active="recipes" mainId="recipe-work" navigation={<>
-        <Link to="/">{t('app-shell', 'assignment')}</Link>
-        <Link to="/recipes" aria-current="page">{t('app-shell', 'recipes')}</Link>
-      </>} />
+      <WorkbenchHeader
+        active="recipes"
+        mainId="recipe-work"
+        navigation={
+          <>
+            <Link to="/">{t('app-shell', 'assignment')}</Link>
+            <Link to="/recipes" aria-current="page">
+              {t('app-shell', 'recipes')}
+            </Link>
+          </>
+        }
+      />
       <main className="content recipe-workbench" id="recipe-work" tabIndex={-1}>
-        <Link className="recipe-detail-link" to="/recipes">{t('recipe-grid', 'backToRecipes')}</Link>
+        <Link className="recipe-detail-link" to="/recipes">
+          {t('recipe-grid', 'backToRecipes')}
+        </Link>
         <div className="heading">
           <div>
-            <h1 tabIndex={-1} ref={heading} lang={preview.data ? '' : undefined}>{preview.data?.metadata.title ?? t('recipe-grid', 'exampleHeading')}</h1>
+            <h1 tabIndex={-1} ref={heading} lang={preview.data ? '' : undefined}>
+              {preview.data?.metadata.title ?? t('recipe-grid', 'exampleHeading')}
+            </h1>
             {preview.data && <p lang="">{preview.data.metadata.scenario}</p>}
           </div>
         </div>
@@ -73,35 +86,69 @@ function RecipeWorkbench({ recipeId }: { recipeId: string }) {
         {preview.isError && (
           <>
             <p role="alert">{t('recipe-grid', 'previewError')}</p>
-            <button className="primary-button" type="button" disabled={preview.isFetching}
-              onClick={() => void preview.refetch()}>{t('grid', 'retry')}</button>
+            <button
+              className="primary-button"
+              type="button"
+              disabled={preview.isFetching}
+              onClick={() => void preview.refetch()}
+            >
+              {t('grid', 'retry')}
+            </button>
           </>
         )}
         {preview.data && (
           <div className="workspace-grid">
             <section className="panel" aria-labelledby="recipe-preview-heading">
-              <div className="panel-header"><h2 id="recipe-preview-heading">{t('recipe-grid', 'exampleHeading')}</h2></div>
+              <div className="panel-header">
+                <h2 id="recipe-preview-heading">{t('recipe-grid', 'exampleHeading')}</h2>
+              </div>
               <div className="recipe-preview">
                 <p>{t('recipe-grid', 'exampleSafety')}</p>
                 <h3>{t('recipe-grid', 'inputFields')}</h3>
                 <dl className="assignment-list" lang="">
-                  {preview.data.metadata.inputs.map(field => (
-                    <div key={field.name}><dt>{field.name}</dt><dd>{field.description}</dd></div>
+                  {preview.data.metadata.inputs.map((field) => (
+                    <div key={field.name}>
+                      <dt>{field.name}</dt>
+                      <dd>{field.description}</dd>
+                    </div>
                   ))}
                 </dl>
                 <details className="advanced-panel">
                   <summary>{t('recipe-grid', 'exampleJson')}</summary>
-                  <pre className="result-json" tabIndex={0} aria-label={t('recipe-grid', 'exampleJson')}>{preview.data.exactExampleJson}</pre>
+                  <pre
+                    className="result-json"
+                    tabIndex={0}
+                    aria-label={t('recipe-grid', 'exampleJson')}
+                  >
+                    {preview.data.exactExampleJson}
+                  </pre>
                 </details>
               </div>
               <div className="panel-footer setup-footer">
-                <button className="primary-button" type="button" onClick={() => void runExample()} disabled={run.isPending}>
+                <button
+                  className="primary-button"
+                  type="button"
+                  onClick={() => void runExample()}
+                  disabled={run.isPending}
+                >
                   {run.isPending ? t('app', 'checking') : t('app', 'runExample')}
                 </button>
-                {!run.isIdle && <a className="text-button result-jump" href="#recipe-plan-heading">{t('plan-result', 'goToReview')}</a>}
+                {!run.isIdle && (
+                  <a className="text-button result-jump" href="#recipe-plan-heading">
+                    {t('plan-result', 'goToReview')}
+                  </a>
+                )}
               </div>
             </section>
-            <PlanResult pending={run.isPending} error={run.error} result={lastResult} example={false} edited={false} headingId="recipe-plan-heading" retainPrevious />
+            <PlanResult
+              pending={run.isPending}
+              error={run.error}
+              result={lastResult}
+              example={false}
+              edited={false}
+              headingId="recipe-plan-heading"
+              retainPrevious
+            />
           </div>
         )}
       </main>

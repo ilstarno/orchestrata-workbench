@@ -4,7 +4,9 @@ import { extractRecords } from './input-model'
 export function parseRecords(text: string) {
   JSON.parse(text)
   let cursor = 0
-  const space = () => { while (/\s/.test(text[cursor] ?? '') && cursor < text.length) cursor++ }
+  const space = () => {
+    while (/\s/.test(text[cursor] ?? '') && cursor < text.length) cursor++
+  }
   function string() {
     const start = cursor++
     while (cursor < text.length) {
@@ -16,24 +18,41 @@ export function parseRecords(text: string) {
   function value(depth: number): void {
     if (depth > 16) throw new Error('Nesting limit')
     space()
-    if (text[cursor] === '"') { string(); return }
+    if (text[cursor] === '"') {
+      string()
+      return
+    }
     if (text[cursor] === '{') {
-      cursor++; space(); const keys = new Set<string>()
+      cursor++
+      space()
+      const keys = new Set<string>()
       while (text[cursor] !== '}') {
-        const key = string(); if (keys.has(key)) throw new Error('Duplicate key'); keys.add(key)
-        space(); cursor++; value(depth + 1); space()
+        const key = string()
+        if (keys.has(key)) throw new Error('Duplicate key')
+        keys.add(key)
+        space()
+        cursor++
+        value(depth + 1)
+        space()
         if (text[cursor] !== ',') break
-        cursor++; space()
+        cursor++
+        space()
       }
-      cursor++; return
+      cursor++
+      return
     }
     if (text[cursor] === '[') {
-      cursor++; space()
+      cursor++
+      space()
       while (text[cursor] !== ']') {
-        value(depth + 1); space(); if (text[cursor] !== ',') break
-        cursor++; space()
+        value(depth + 1)
+        space()
+        if (text[cursor] !== ',') break
+        cursor++
+        space()
       }
-      cursor++; return
+      cursor++
+      return
     }
     while (cursor < text.length && !/[\s,}\]]/.test(text[cursor])) cursor++
   }
